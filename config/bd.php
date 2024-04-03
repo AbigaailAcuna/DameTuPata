@@ -6,7 +6,7 @@ class Conectar
       public static function conexion()
       {
             try {
-                  $conexion = new mysqli("localhost", "root", "", "cuponeralis");
+                  $conexion = new mysqli("localhost", "root", "", "dametupata");
             } catch (Exception $e) {
                   echo 'Error de conexión';
             }

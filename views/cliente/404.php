@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>404 Error</title>
-        <link href="http://localhost/DameTuPata/assets/css/header.css" rel="stylesheet" />
+        <link href="http://localhost/DameTuPata/assets/css/404.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -46,6 +46,6 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+      
     </body>
 </html>
