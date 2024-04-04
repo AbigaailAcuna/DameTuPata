@@ -18,6 +18,12 @@ include 'Modelo.php';
         $query = "SELECT IdProducto, NombreProducto, DescripcionProducto, CantidadProducto, ImagenProducto, PrecioUnitario, IdEstado from producto WHERE IdEstado = '1'";
         return $this->get($query);
     }
+    //método para mostrar un producto
+    public function ObtenerProducto($id)
+    {
+        $query = "SELECT IdProducto, NombreProducto, DescripcionProducto, CantidadProducto, ImagenProducto, PrecioUnitario, IdEstado from producto WHERE IdEstado = '1' and IdProducto = ?";
+        return $this->getOne($query, $id);
+    }
 
        
    

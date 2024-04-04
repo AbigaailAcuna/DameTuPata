@@ -23,5 +23,23 @@ class ComprasController
           
       }
 
+      //detalle de productos
+      public function detalle($id)
+      {
+              //traemos el modelo
+            require_once "./models/ComprasModelo.php";
+           
+              //instanciamos el modelo
+            $productos = new ComprasModelo();
+              
+               //traemos el método del modelo
+            $info["productos"] = $productos->ObtenerProducto($id);
+
+
+
+            require_once "views/cliente/DetalleProducto.php";
+
+      }
+
      
 }

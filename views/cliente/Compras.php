@@ -68,7 +68,7 @@
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
-                                    <a class="btn btn-primary" href=""><i class="bi bi-eyeglasses"></i></a>
+                                    <a class="btn btn-primary" href="?c=Compras&a=detalle&id=<?php echo $dato["IdProducto"]?>"><i class="bi bi-eyeglasses"></i></a>
                                     <a class="btn btn-success" href=""><i class="bi bi-cart"></i></a>
                                 </div>
                             </div>
