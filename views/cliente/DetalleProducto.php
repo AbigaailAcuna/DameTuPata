@@ -15,19 +15,19 @@
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Dame Tu Pata</a>
+                <a class="navbar-brand text-white" href="#!">Dame Tu Pata</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="?c=Compras&a=index">Compras</a></li> 
+                        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="?c=Compras&a=index">Compras</a></li> 
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
+                        <button class="btn btn-outline-light" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span class="badge bg-light text-danger ms-1 rounded-pill">0</span>
                         </button>
                     </form>
                 </div>
@@ -47,7 +47,7 @@
                         <p class="lead"><?php echo $info["productos"]["DescripcionProducto"]?></p>
                         <div class="d-flex">
                          
-                        <a class="btn btn-success" href="?c=Compras&a=index"><i class="bi bi-cart"> Seguir Comprando</i></a>
+                        <a class="btn btn-outline-danger" href="?c=Compras&a=index"><i class="bi bi-cart"> Seguir Comprando</i></a>
                         </div>
                     </div>
                 </div>
