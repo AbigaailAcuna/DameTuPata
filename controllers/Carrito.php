@@ -8,7 +8,7 @@ class CarritoController
     public function comprar()
     {
         $validate = -1;
-        $carrito = $_SESSION['carrito'];
+       // $carrito = $_SESSION['carrito'];
         $errors = [];
        
         if (isset($_POST['pagar'])) {
@@ -94,6 +94,33 @@ class CarritoController
                   $_SESSION['carrito'] = $arreglo;
                   header('Location:?c=Compras&a=index');
             }
+      }
+      
+      //borrar productos del carrito
+      public function borrar($id)
+      {
+            if (isset($_SESSION['carrito'])) {
+                  if ($_GET['id']) {
+                        $arreglo = $_SESSION['carrito'];
+                        for ($i = 0; $i < count($arreglo); $i++) {
+                              if ($arreglo[$i]['Id'] == $_GET['id']) {
+                                    $numero = $i;
+                                    //seteando la cantidad a cero
+                                    $arreglo[$numero]['Cantidad'] = 0;
+                                    $_SESSION['carrito'] = $arreglo;
+
+                                    //lo eliminamos completamente
+                                    if ($arreglo[$i]['Cantidad'] == 0) {
+                                          unset($arreglo[$i]);
+                                          //ordenamos el arreglo
+                                          $arreglo = array_values($arreglo);
+                                          $_SESSION['carrito'] = $arreglo;
+                                    }
+                              }
+                        }
+                  }
+            }
+            header('Location:?c=Carrito&a=comprar');
       }
 
       
