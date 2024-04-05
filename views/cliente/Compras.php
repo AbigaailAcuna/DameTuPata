@@ -19,23 +19,21 @@
 <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand text-white" href="#!">Dame Tu Pata</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="?c=Principal&a=index">Inicio</a></li> 
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-light" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-light text-danger ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                </div>
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand text-white" href="#!">Dame Tu Pata</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="?c=Principal&a=index">Inicio</a></li>
+                </ul>
+                <button type="button" class="btn btn-outline-light" onclick="location.href='?c=Compras&a=carrito';">
+                    <i class="bi-cart-fill me-1"></i> Carrito
+                    <span class="badge bg-light text-danger ms-1 rounded-pill">0</span>
+                </button>
+
             </div>
-        </nav>
+        </div>
+    </nav>
     <!-- Header-->
     <header class="bg-light py-5">
         <div class="container px-4 px-lg-5 my-5">
@@ -67,8 +65,8 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-danger" href="?c=Compras&a=detalle&id=<?php echo $dato["IdProducto"] ?>"><i class="bi bi-eyeglasses"></i></a>
-                                    <a  class="btn btn-outline-danger" href="?"><i class="bi bi-cart"></i></a>
-                                  
+                                    <a class="btn btn-outline-danger" href="?c=Compras&a=carrito"><i class="bi bi-cart"></i></a>
+
                                 </div>
                             </div>
                         </div>

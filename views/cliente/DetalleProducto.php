@@ -24,9 +24,9 @@
                         <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="?c=Compras&a=index">Compras</a></li> 
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-light" type="submit">
+                        <button class="btn btn-outline-light" href="?c=Compras&a=carrito">
                             <i class="bi-cart-fill me-1"></i>
-                            Cart
+                            Carrito
                             <span class="badge bg-light text-danger ms-1 rounded-pill">0</span>
                         </button>
                     </form>

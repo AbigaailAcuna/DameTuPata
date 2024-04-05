@@ -41,5 +41,10 @@ class ComprasController
 
       }
 
+      public function carrito()
+      {
+            require_once "views/cliente/Carrito.php"; 
+      }
+
      
 }
