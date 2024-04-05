@@ -23,7 +23,7 @@
                 <input type="text" name="NombreUsuario" id="NombreUsuario" placeholder="Nombres" value="<?php echo isset($_SESSION['NombreUsuario']) ? $_SESSION['NombreUsuario'] : ''; ?>">
                 <?php if (!empty($_SESSION['errors']['NombreUsuario'])) : ?>
                     <div class="redmessagee"><?php echo $_SESSION['errors']['NombreUsuario'];
-                     unset($_SESSION['errors']['nombres']);
+                    // unset($_SESSION['errors']['nombres']);
                  ?></div><br>
                 <?php endif; ?>
 
