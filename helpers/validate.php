@@ -101,3 +101,4 @@ function validateDate($date, &$validate, &$errors)
       $validate = $validate == 0 ? 0 : 1;
       $errors['fechaExp'] =  '';
 }
+
