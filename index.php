@@ -3,6 +3,7 @@ require_once "./core/routes.php";
 require_once "./config/config.php";
 require_once "./config/bd.php";
 require_once "./controllers/Principal.php";
+require_once "./helpers/validate.php";
 
 
 if (isset($_GET['c'])) { //Verifica si existe el nombre del controlador
