@@ -5,12 +5,16 @@ session_start();
 class UsuarioController
 {
 
+      public function index()
+      {
+            require_once "views/cliente/Registro.php";
+      }
       public function registrar()
       {
             require_once "./models/UsuarioModelo.php";
 
             // Definir el array de errores
-            $errores = array();
+            $errors = array();
 
             // Verificar si se envió el formulario
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
@@ -26,43 +30,69 @@ class UsuarioController
 
                   // Validar los datos del formulario
                   if (empty($NombreUsuario)) {
-                        $errores['NombreUsuario'] = "Ingrese su Nombre";
+                        $errors['NombreUsuario'] = "Ingrese su Nombre";
                   }
                   if (empty($ApellidoUsuario)) {
-                        $errores['ApellidoUsuario'] = "Ingrese su Apellido";
+                        $errors['ApellidoUsuario'] = "Ingrese su Apellido";
                   }
                   if (empty($DireccionUsuario)) {
-                        $errores['DireccionUsuario'] = "Ingrese su Dirección";
+                        $errors['DireccionUsuario'] = "Ingrese su Dirección";
                   }
                   if (empty($TelefonoUsuario)) {
-                        $errores['TelefonoUsuario'] = "Ingrese su Teléfono";
+                        $errors['TelefonoUsuario'] = "Ingrese su Teléfono";
                   }
                   if (empty($DuiUsuario)) {
-                        $errores['DuiUsuario'] = "Ingrese su DUI";
+                        $errors['DuiUsuario'] = "Ingrese su DUI";
                   }
                   if (empty($CorreoUsuario)) {
-                        $errores['CorreoUsuario'] = "Ingrese su Correo";
+                        $errors['CorreoUsuario'] = "Ingrese su Correo";
                   }
                   if (empty($ContrasenaUsuario)) {
-                        $errores['ContrasenaUsuario'] = "Ingrese su Contraseña";
+                        $errors['ContrasenaUsuario'] = "Ingrese su Contraseña";
                   }
+                  if (!empty($errors)) {
+                        $_SESSION['errors'] = $errors;
+                        $_SESSION['NombreUsuario'] = $NombreUsuario;
+                        $_SESSION['ApellidoUsuario'] = $ApellidoUsuario;
+                        $_SESSION['DireccionUsuario'] = $DireccionUsuario;
+                        $_SESSION['TelefonoUsuario'] = $TelefonoUsuario;
+                        $_SESSION['DuiUsuario'] = $DuiUsuario;
+                        $_SESSION['CorreoUsuario'] = $CorreoUsuario;
+                        $_SESSION['ContrasenaUsuario'] = $ContrasenaUsuario;
 
+                        header('Location:?c=Usuario&a=index');
+                  }
                   // Verificar si hay errores
-                  if (empty($errores)) {
+                  if (empty($errors)) {
                         // Instanciar el modelo de Usuario
                         $userModel = new UsuarioModelo();
 
                         // Verificar si el usuario ya existe
                         if ($userModel->existeUsuario($CorreoUsuario)) {
-                              $errores['general'] = 'El correo electrónico ya está en uso';
+                              $_SESSION['error'] = 'El correo electrónico ya está en uso';
                         } else {
                               // Agregar el usuario
                               if ($userModel->AgregarUsuario($NombreUsuario, $IdRol, $ApellidoUsuario, $TelefonoUsuario, $DuiUsuario, $CorreoUsuario, $DireccionUsuario, $ContrasenaUsuario)) {
+                                    // Limpiar los valores de sesión
+                                    unset($_SESSION['NombreUsuario']);
+                                    unset($_SESSION['ApellidoUsuario']);
+                                    unset($_SESSION['DireccionUsuario']);
+                                    unset($_SESSION['TelefonoUsuario']);
+                                    unset($_SESSION['DuiUsuario']);
+                                    unset($_SESSION['CorreoUsuario']);
+                                    unset($_SESSION['ContrasenaUsuario']);
+
+                                    unset($_SESSION['errors']);
+                                    unset($_SESSION['error']);
+
                                     // Redirigir al formulario de registro
-                                    header('Location:?c=Usuario&a=registro');
+                                    header('Location:?c=Compras&a=index');
+
+
+
                                     exit;
                               } else {
-                                    $errores['general'] = 'Error al registrar';
+                                    $_SESSION['error'] = 'Error al registrar';
                               }
                         }
                   }
