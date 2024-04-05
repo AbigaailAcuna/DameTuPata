@@ -34,30 +34,35 @@ class CarritoController
             $info["productos"] = $productos->ObtenerProducto($id);
 
 
+            //verificamos que exista la sesión
             if (isset($_SESSION['carrito'])) {
                   if ($_GET['id']) {
                         $arreglo = $_SESSION['carrito'];
                         $encontro = false;
                         $numero = 0;
                         for ($i = 0; $i < count($arreglo); $i++) {
+                              //compramos el id de url con el id del producto en el carrito
                               if ($arreglo[$i]['Id'] == $_GET['id']) {
                                     $encontro = true;
                                     $numero = $i;
                               }
                         }
                        if ($encontro == true) {
-                              
+                              //si coinciden los id es que ya lo agregó al carrito así que en lugar de agregarlo, le suma 1
+                              //verificamos primero la disponibilidad según bd
                               $dispo = $arreglo[$numero]['CantidadProducto'];
                               if ($arreglo[$numero]['Cantidad'] >= $dispo) {
                                     ///no agrega más
                                     echo "Ya no puede agregar más de este producto";
                               } else {
                                     $arreglo[$numero]['Cantidad'] = $arreglo[$numero]['Cantidad'] + 1;
+                                    //actualizamos el arreglo
                               $_SESSION['carrito'] = $arreglo;
                               }
                          }
             
                         else {
+                              //si no encontró coincidencia, agrega uno nuevo
                               $nombre = $info["productos"]["NombreProducto"];
                               $precio = $info["productos"]["PrecioUnitario"];
                               $imagen = $info["productos"]["ImagenProducto"];
@@ -122,6 +127,61 @@ class CarritoController
             }
             header('Location:?c=Carrito&a=comprar');
       }
+
+        //botón sumar 
+        public function sumar($id)
+        {
+              //vemos qué acción hay que ejecutar
+              if (isset($_SESSION['carrito'])) {
+                    $arreglo = $_SESSION['carrito'];
+                    //hay una acción en la url
+                    if (isset($_GET["a"])) {
+                          if ($_GET["a"] == "sumar") {
+                                for ($i = 0; $i < count($arreglo); $i++) {
+                                      if ($arreglo[$i]['Id'] == $_GET['id']) {
+                                            $numero = $i;
+                                            $arreglo[$numero]['Cantidad'] = $arreglo[$numero]['Cantidad'] + 1;
+                                            $dispo = $arreglo[$numero]['CantidadProducto'];
+                                            if ($arreglo[$numero]['Cantidad'] > $dispo) {
+                                                  ///mensaje
+                                            } else {
+                                                  $_SESSION['carrito'] = $arreglo;
+                                            }
+                                      }
+                                }
+                          }
+  
+                          header('Location:?c=Carrito&a=comprar');
+                    }
+              }
+        }
+    //botón restar
+        public function restar($id)
+        {
+            
+              if (isset($_SESSION['carrito'])) {
+                    $arreglo = $_SESSION['carrito'];
+                    //hay una acción en la url
+                    if (isset($_GET["a"])) {
+                          if ($_GET["a"] == "restar") {
+                                for ($i = 0; $i < count($arreglo); $i++) {
+                                      if ($arreglo[$i]['Id'] == $_GET['id']) {
+                                            $numero = $i;
+                                            if ($arreglo[$numero]['Cantidad'] > 1) {
+                                                  $arreglo[$numero]['Cantidad'] = $arreglo[$numero]['Cantidad'] - 1;
+                                            } else {
+                                                  unset($arreglo[$i]);
+                                                  $arreglo = array_values($arreglo);
+                                                  $_SESSION['carrito'] = $arreglo;
+                                            }
+                                      }
+                                      $_SESSION['carrito'] = $arreglo;
+                                }
+                          }
+                    }
+                    header('Location:?c=Carrito&a=comprar');
+              }
+        }
 
       
 }

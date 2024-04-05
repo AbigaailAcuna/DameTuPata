@@ -41,7 +41,7 @@
                     }
                     echo $count;
 
-                  var_dump($_SESSION["carrito"]);
+                 // var_dump($_SESSION["carrito"]);
   
                     ?>
                     </span>
