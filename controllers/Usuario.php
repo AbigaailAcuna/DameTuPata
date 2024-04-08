@@ -5,10 +5,13 @@ session_start();
 class UsuarioController
 {
 
-      public function index()
+      //visualizamos la pantalla de registro
+      public function registro()
       {
             require_once "views/cliente/Registro.php";
       }
+
+      //validamos e insertamos en bd
       public function registrar()
       {
             require_once "./models/UsuarioModelo.php";
@@ -60,7 +63,7 @@ class UsuarioController
                         $_SESSION['CorreoUsuario'] = $CorreoUsuario;
                         $_SESSION['ContrasenaUsuario'] = $ContrasenaUsuario;
 
-                        header('Location:?c=Usuario&a=index');
+                        header('Location:?c=Usuario&a=registro');
                   }
                   // Verificar si hay errores
                   if (empty($errors)) {
@@ -85,7 +88,7 @@ class UsuarioController
                                     unset($_SESSION['errors']);
                                     unset($_SESSION['error']);
 
-                                    // Redirigir al formulario de registro
+                                    // Redirigir 
                                     header('Location:?c=Compras&a=index');
 
 
@@ -98,7 +101,84 @@ class UsuarioController
                   }
             }
 
-            // Cargar la vista pasando los errores como dato
+            // Cargar la vista
             require_once "views/cliente/Registro.php";
+      }
+
+      public function iniciosesion(){
+
+            //cargamos la vista de inicio de sesión
+            require_once "views/cliente/InicioSesion.php";
+      }
+
+      public function validarusuario(){
+
+            require_once "./models/UsuarioModelo.php";
+
+             // Definir el array de errores
+             $errors = array();
+
+             // Verificar si se envió el formulario
+             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+
+                   // Obtener los datos del formulario
+                
+                   
+                   $CorreoUsuario = $_POST['CorreoUsuario'];
+                   $ContrasenaUsuario = $_POST['ContrasenaUsuario'];
+
+                  
+                   // Validar los datos del formulario
+                   if (empty($CorreoUsuario)) {
+                         $errors['CorreoUsuario'] = "Ingrese su Correo";
+                   }
+                   if (empty($ContrasenaUsuario)) {
+                         $errors['ContrasenaUsuario'] = "Ingrese su Contraseña";
+                   }
+                   if (!empty($errors)) {
+                         $_SESSION['errors'] = $errors;
+                        
+ 
+                         header('Location:?c=Usuario&a=iniciosesion');
+                   }
+                   // Verificar si hay errores
+                   if (empty($errors)) {
+                         // Instanciar el modelo de Usuario
+                         $userModel = new UsuarioModelo();
+ 
+                         
+                               // Agregar el usuario
+                               if ($login_data =  $userModel->validarUsuario($CorreoUsuario, $ContrasenaUsuario)) {
+                                     // Limpiar los valores de sesión
+                                     unset($_SESSION['errors']);
+                                     unset($_SESSION['error']);
+                                     $login_data = $login_data[0];
+                                     $_SESSION['login_data'] = $login_data;
+                                     // Redirigir al formulario de registro
+                                     header('Location:?c=Compras&a=index');
+ 
+ 
+ 
+                                     exit;
+                               } else {
+                                    $_SESSION['error'] = 'Datos erroneos o ha sido bloqueado por los administradores';
+
+                                    
+                                     unset($_SESSION['errors']);
+                                     
+                                     //header('Location:?c=Usuario&a=iniciosesion');
+                               }
+                         
+                   }
+             }
+             require_once "views/cliente/InicioSesion.php";
+ 
+
+      }
+      public function logout(){
+
+            session_unset();
+            session_destroy();
+            header('Location:?c=Compras&a=index');   
       }
 }

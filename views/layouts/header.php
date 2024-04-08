@@ -26,26 +26,45 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="?c=Principal&a=index">Inicio</a></li>
                 </ul>
-                <div class="nav-item dropdown">
-                    <a class="nav-link ms-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-fill" style="font-size: 1.5rem; color: rgb(255, 255, 255);"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end ms-3" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="?c=Principal&a=inicio">Iniciar Sesión</a></li>
-                        <li><a class="dropdown-item" href="?c=Usuario&a=registrar">Registrarse</a></li>
-                        <li><a class="dropdown-item" href="?c=Usuario&a=logout">Cerrar Sesión</a></li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="">Correo agregar</a></li>
-                    </ul>
-                </div>
+                <?php session_start();
+              if(isset($_SESSION['login_data']) && !is_null($_SESSION['login_data'])) {  ?>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link ms-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill" style="font-size: 1.5rem; color: rgb(255, 255, 255);"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end ms-3" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="?c=Usuario&a=iniciosesion">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="?c=Usuario&a=registrar">Registrarse</a></li>
+                            <li><a class="dropdown-item" href="?c=Usuario&a=logout">Cerrar Sesión</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href=""><?= $_SESSION['login_data']['CorreoUsuario'] ?></a></li>
+                        </ul>
+                    </div>
+                <?php } else { ?>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link ms-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill" style="font-size: 1.5rem; color: rgb(255, 255, 255);"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end ms-3" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="?c=Usuario&a=iniciosesion">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="?c=Usuario&a=registrar">Registrarse</a></li>
+                            <li><a class="dropdown-item" href="?c=Usuario&a=logout">Cerrar Sesión</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            
+                        </ul>
+                    </div>
+                <?php
+                } ?>
 
                 <button type="button" class="btn btn-outline-light ms-3" onclick="location.href='?c=Carrito&a=comprar';">
                     <i class="bi-cart-fill me-1"></i> Carrito
                     <span class="badge bg-light text-danger ms-1 rounded-pill">
                         <?php
-                        session_start();
+
                         $count = 0;
                         if (isset($_SESSION)) {
                             if (isset($_SESSION['carrito'])) {

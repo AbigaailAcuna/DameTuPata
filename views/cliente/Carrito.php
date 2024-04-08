@@ -10,7 +10,7 @@
                                 <div class="me-2">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="ms-2 mt-2">Detalle de Carrito</h5>
-                                        <a class="btn btn-primary" href="?c=Compras&a=index"><i class="bi bi-cart-plus"></i> Seguir Comprando</a>
+                                        <a class="btn btn-outline-danger" href="?c=Compras&a=index"><i class="bi bi-cart-plus"></i> Seguir Comprando</a>
                                     </div>
                                     <hr class="mt-2 mb-2">
                                     <div id="productos-carrito">

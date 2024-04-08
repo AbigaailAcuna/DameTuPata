@@ -70,6 +70,7 @@
                     echo '' . $_SESSION['error'] . '';
                     echo '</div>';
                     unset($_SESSION['error']);
+                  
                 }
                 ?>
 
