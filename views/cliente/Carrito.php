@@ -1,4 +1,8 @@
-<?php include 'views/layouts/header.php'; ?>
+<?php 
+
+ include 'views/layouts/header.php';
+//var_dump($_SESSION);
+?>
     <div class="container my-5">
         <div class="row">
             <div class="col-sm-12">
@@ -18,7 +22,7 @@
                                             <!--acá productos agregados-->
                                             <?php
 
-                                            session_start();
+                                         
                                             error_reporting(E_ERROR | E_PARSE);
                                            
                                             
@@ -103,7 +107,7 @@
                                             if ($validate != 1) {
                                         ?>
 
-                                                <form action="<?= $_SERVER['PHP_SELF'] . '?c=Carrito&a=comprar' ?>" method="POST">
+                                                <form action="<?="?c=Carrito&a=comprar" ?>" method="POST">
                                                     <div class="mb-3">
                                                         <label for="nombre" class="form-label">Nombre: </label>
                                                         <div class="input-group">
@@ -158,9 +162,9 @@
                                             } else {
                                             ?>
                                                 <div class="pay-verify-container d-flex justify-content-center flex-column align-items-center">
-                                                    <img src="http://localhost/Proyecto-Lis/verify.gif" class="pay-verify-img">
+                                                    <img src="http://localhost/DameTuPata/assets/animation/verify.gif" class="pay-verify-img">
                                                     <p class="text-success">Su pago se ha realizado con éxito</p>
-                                                    <a href="?c=Ventas&a=insertSale" class="btn btn-primary">Aceptar</a>
+                                                    <a href="?c=Venta&a=FinalizarCompra" class="btn btn-primary">Aceptar</a>
                                                 </div>
                                             <?php
                                             }
