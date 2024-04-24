@@ -1,8 +1,5 @@
-<?php 
-
- include 'views/layouts/header.php';
-//var_dump($_SESSION);
-?>
+<title>Dame Tu Pata - Carrito</title>
+<?php include 'views/layouts/header.php'; ?>
     <div class="container my-5">
         <div class="row">
             <div class="col-sm-12">
@@ -185,3 +182,5 @@
             </div>
         </div>
     </div>
+</body>
+</html>

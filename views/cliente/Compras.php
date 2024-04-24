@@ -1,3 +1,4 @@
+<title>Dame Tu Pata - Compras</title>
 <?php include 'views/layouts/header.php'; ?>
     <!-- Header-->
     <header class="bg-light py-5">
@@ -41,10 +42,6 @@
         </div>
     </section>
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="http://localhost/DameTuPata/assets/js/compras.js"></script>
 </body>
 
 </html>

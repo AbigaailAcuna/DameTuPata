@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dame Tu Pata - Compras</title>
+   
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -14,6 +14,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="http://localhost/DameTuPata/assets/css/compra.css" rel="stylesheet" />
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="http://localhost/DameTuPata/assets/js/compras.js"></script>
 </head>
 
 <body>
@@ -43,6 +47,7 @@
                         </ul>
                     </div>
                 <?php } else { ?>
+                    
                     <div class="nav-item dropdown">
                         <a class="nav-link ms-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-fill" style="font-size: 1.5rem; color: rgb(255, 255, 255);"></i>
@@ -59,7 +64,9 @@
                     </div>
                 <?php
                 } ?>
-
+         <?php 
+            if(isset($_SESSION['login_data']) && !is_null($_SESSION['login_data'])){
+                ?>
                 <button type="button" class="btn btn-outline-light ms-3" onclick="location.href='?c=Carrito&a=comprar';">
                     <i class="bi-cart-fill me-1"></i> Carrito
                     <span class="badge bg-light text-danger ms-1 rounded-pill">
@@ -80,6 +87,9 @@
                         ?>
                     </span>
                 </button>
+                <?php
+        }
+                ?>
 
 
 
