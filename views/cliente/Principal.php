@@ -1,558 +1,406 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dame Tu Pata</title>
-
-    <!-- Font Awesome icons (free version)-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <Title>dametupataSV</Title>
+        <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-   
-    <link href="http://localhost/DameTuPata/assets/css/principal.css" rel="stylesheet" />
-</head>
+        <link rel="stylesheet" href="http://localhost/DameTuPata/assets/css/style.css">
+        <link rel="stylesheet" href="http://localhost/DameTuPata/assets/css/principal.css">
+        <link rel="icon" href="http://localhost/DameTuPata/assets/img/logos/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="http://localhost/DameTuPata/assets/css/swiper-bundle.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="http://localhost/DameTuPata/assets/js/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+      <!-- Topbar Start -->
+    <div class="top container-fluid d-none d-lg-block">
+      <div class="row py-2 px-lg-5">
+          <div class="col-lg-6 text-left mb-2 mb-lg-0">
+              <div class="d-inline-flex align-items-center">
+                  <small><i class="fa fa-phone-alt mr-2"></i>+503 7519 1919</small>
+                  <small class="px-3">|</small>
+                  <small><i class="fa fa-envelope mr-2"></i>dametupatasv@gmail.com</small>
+              </div>
+          </div>
+          <div class="col-lg-6 text-right">
+              <div class="d-inline-flex align-items-center">
+                  <a class="px-2" href="https://www.facebook.com/dametupatasv/?locale=es_LA">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="px-2" href="https://twitter.com/DameTuPatasv?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a class="px-2" href="https://www.instagram.com/dametupatasv/?hl=es">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Topbar End -->
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+
+  <!-- Navbar Start -->
+  <div class="container-fluid p-0 sticky-top">
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+          <a href="http://localhost/DameTuPata/views/cliente/Principal.php" class="navbar-brand ml-lg-3">
+              <h1 class="m-0"><img src="http://localhost/DameTuPata/assets/img/logos/logo.png" class="logo"> Dame Tu Pata</h1>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+              <div class="navbar-nav m-auto py-0">
+                  <a href="http://localhost/DameTuPata/views/cliente/Principal.php" class="nav-item nav-link active">Inicio</a>
+                  <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sobre Nosotros</a>
+                     <div class="dropdown-menu rounded-0 m-0">
+                         <a href="#" class="dropdown-item">Rescates</a>
+                         <a href="#" class="dropdown-item">Don Tino</a>
+                     </div>
+                 </div>
+                  <a href="?c=Principal&a=adopciones" class="nav-item nav-link">Adoptar</a>
+                  <a href="?c=Principal&a=donaciones" class="nav-item nav-link">Donar</a>
+                  <a href="?c=Compras&a=index" class="nav-item nav-link">Tienda Solidaria</a>
+              </div>
+          </div>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+      <!---->
+      <header class="masthead">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Casos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="?c=Principal&a=adopciones">Adopciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="?c=Compras&a=index">Compras</a></li>
-                    <li class="nav-item"><a class="nav-link" href="?c=Principal&a=donaciones">Donaciones</a></li>     
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-    
-        <div class="container">
-            <div class="masthead-subheading">Welcome To Our Studio!</div>
-            <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-        </div>
+            <div class="masthead-subheading">RESCATAR SALVA VIDAS!</div>
+            <div class="masthead-heading text-uppercase">RESCATAMOS Y FOMENTAMOS LA ADOPCIÓN DE PERROS ABANDONADOS DE EL SALVADOR</div>
+            <a class="my-custom-button" href="?c=Principal&a=adopciones">ADOPTA</a>
+         </div>
     </header>
     <!-- Services-->
     <section class="page-section" id="services">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Services</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Portfolio Grid-->
-    <section class="page-section bg-light" id="portfolio">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Portfolio</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 1-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="http://localhost/DameTuPata/assets/img/portfolio/1.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Threads</div>
-                            <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="http://localhost/DameTuPata/assets/img/portfolio/2.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Explore</div>
-                            <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="http://localhost/DameTuPata/assets/img/portfolio/3.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Finish</div>
-                            <div class="portfolio-caption-subheading text-muted">Identity</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 4-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="http://localhost/DameTuPata/assets/img/portfolio/4.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Lines</div>
-                            <div class="portfolio-caption-subheading text-muted">Branding</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                    <!-- Portfolio item 5-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="http://localhost/DameTuPata/assets/img/portfolio/5.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Southwest</div>
-                            <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <!-- Portfolio item 6-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="http://localhost/DameTuPata/assets/img/portfolio/6.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Window</div>
-                            <div class="portfolio-caption-subheading text-muted">Photography</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About-->
-    <section class="page-section" id="about">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">About</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-            <ul class="timeline">
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="http://localhost/DameTuPata/assets/img/about/1.jpg" alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>2009-2011</h4>
-                            <h4 class="subheading">Our Humble Beginnings</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="http://localhost/DameTuPata/assets/img/about/2.jpg" alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>March 2011</h4>
-                            <h4 class="subheading">An Agency is Born</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="http://localhost/DameTuPata/assets/img/about/3.jpg" alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>December 2015</h4>
-                            <h4 class="subheading">Transition to Full Service</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="http://localhost/DameTuPata/assets/img/about/4.jpg" alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>July 2020</h4>
-                            <h4 class="subheading">Phase Two Expansion</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image">
-                        <h4>
-                            Be Part
-                            <br />
-                            Of Our
-                            <br />
-                            Story!
-                        </h4>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- Team-->
-    <section class="page-section bg-light" id="team">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="http://localhost/DameTuPata/assets/img/team/1.jpg" alt="..." />
-                        <h4>Parveen Anand</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                        <h4>Diana Petersen</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Clients-->
-    <div class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-3 col-sm-6 my-3">
-                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="http://localhost/DameTuPata/assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
-                </div>
-                <div class="col-md-3 col-sm-6 my-3">
-                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="http://localhost/DameTuPata/assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
-                </div>
-                <div class="col-md-3 col-sm-6 my-3">
-                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="http://localhost/DameTuPata/assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
-                </div>
-                <div class="col-md-3 col-sm-6 my-3">
-                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="http://localhost/DameTuPata/assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-   
-    <!-- Footer-->
-    <footer class="footer py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
-                <div class="col-lg-4 my-3 my-lg-0">
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Portfolio Modals-->
-    <!-- Portfolio item 1 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="http://localhost/DameTuPata/assets/img/close-icon.svg" alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="http://localhost/DameTuPata/assets/img/portfolio/1.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Client:</strong>
-                                        Threads
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Illustration
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio item 2 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="http://localhost/DameTuPata/assets/img/close-icon.svg" alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="http://localhost/DameTuPata/assets/img/portfolio/2.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Client:</strong>
-                                        Explore
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Graphic Design
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio item 3 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="http://localhost/DameTuPata/assets/img/close-icon.svg" alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="http://localhost/DameTuPata/assets/img/portfolio/3.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Client:</strong>
-                                        Finish
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Identity
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio item 4 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="http://localhost/DameTuPata/assets/img/close-icon.svg" alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="http://localhost/DameTuPata/assets/img/portfolio/4.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Client:</strong>
-                                        Lines
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Branding
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio item 5 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="http://localhost/DameTuPata/assets/img/close-icon.svg" alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="http://localhost/DameTuPata/assets/img/portfolio/5.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Client:</strong>
-                                        Southwest
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Website Design
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio item 6 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="http://localhost/DameTuPata/assets/img/close-icon.svg" alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="http://localhost/DameTuPata/assets/img/portfolio/6.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Client:</strong>
-                                        Window
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Photography
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="http://localhost/DameTuPata/assets/js/scripts.js"></script>
- 
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
+      <div class="container">
+          <div class="text-center">
+              <h2 class="section-heading text-uppercase">NUESTRO TRABAJO</h2>
+              <h3 class="section-subheading text-muted">En Dame Tu Pata somos una fundación no gubernamental sin fines de lucro comprometidos en velar por el bienestar de los animales y trabajando para que ellos puedan tener una segunda oportunidad y mejor vida</h3>
+          </div>
+          <div class="row text-center">
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fas fa-circle fa-stack-2x text-warning"></i>
+                      <i class="fa-solid fa-paw fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="my-3">Rescates</h4>
+                  <p class="text-muted">Dame Tu Pata atiende denuncias de maltrato y abandono de animales en El Salvador, ofreciendo atención médica y amorosa a los animales rescatados.</p>
+              </div>
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fas fa-circle fa-stack-2x text-warning"></i>
+                      <i class="fa-solid fa-dog fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="my-3">Adopciones</h4>
+                  <p class="text-muted">Fomentamos la adopcion responsable de mascotas una vez logren su recuperación y esten listos para ser adoptados por una familia que los ame por el resto de sus vidas con mucho amor.</p>
+              </div>
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fas fa-circle fa-stack-2x text-warning"></i>
+                      <i class="fa-solid fa-handshake-angle fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="my-3">Hogar Temporal</h4>
+                  <p class="text-muted">Dame Tu Pata cuenta con la ayuda de personas de gran corazón que abren las puertas de sus hogares a nuestros animales rescatados mientras esperan encontrar una familia adoptiva.</p>
+              </div>
+          </div>
+      </div>
+  </section>
 
+  <!--Slider de cards-->
+  <div class="text-center">
+   <h2 class="section-heading text-uppercase rescates">HISTORIAS QUE CAMBIAN VIDAS</h2>
+</div>
+  <section class="container1">
+    <div class="card__container swiper">
+       <div class="card__content">
+          <div class="swiper-wrapper">
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Belen/belen6.jpg" alt="image" class="card__img">
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Belen</h3>
+                   <p class="card__description">
+                      Rescate de Dame Tu Pata
+                   </p>
+ 
+                   <a href="http://localhost/DameTuPata/views/cliente/belen.php" class="card__button">Conocer más</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Cocoa/cocoa6.jpg" alt="image" class="card__img">
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Cocoa</h3>
+                   <p class="card__description">
+                     Rescate de Dame Tu Pata
+                   </p>
+ 
+                   <a href="http://localhost/DameTuPata/views/cliente/cocoa.php" class="card__button">Conocer más</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiby/fiby1.jpg" alt="image" class="card__img">
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Fiby</h3>
+                   <p class="card__description">
+                     Rescate de Dame Tu Pata
+                   </p>
+ 
+                   <a href="http://localhost/DameTuPata/views/cliente/fiby.php" class="card__button">Conocer más</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiji/fiji8.jpg" alt="image" class="card__img">
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Fiji</h3>
+                   <p class="card__description">
+                     Rescate de Dame Tu Pata
+                   </p>
+ 
+                   <a href="http://localhost/DameTuPata/views/cliente/fiji.php" class="card__button">Conocer más</a>
+                </div>
+             </article>
+
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Bebuchita12-Hija de Gigi/bebuchita1.jpg" alt="image" class="card__img">
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Bebuchita</h3>
+                   <p class="card__description">
+                     Rescate de Dame Tu Pata
+                   </p>
+ 
+                   <a href="http://localhost/DameTuPata/views/cliente/bebuchita.php" class="card__button">Conocer más</a>
+                </div>
+             </article>
+
+             <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Lolita/lolita2.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Lolita</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/lolita.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+
+            <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Lula/lula4.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Lula</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/lula.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+
+            <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Manolo/manolo1.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Manolo</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/manolo.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+
+            <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Matilda/matilda5.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Matilda</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/matilda.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+
+            <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Mumujita/mumujita5.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Mumujita</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/mumujita.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+
+            <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Piñita/piñita7.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Piñita</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/piñita.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+
+            <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Quesito/quesito10.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Quesito</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/quesito.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+
+            <article class="card__article swiper-slide">
+               <div class="card__image">
+                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Tango/tango1.jpg" alt="image" class="card__img">
+                  <div class="card__shadow"></div>
+               </div>
+
+               <div class="card__data">
+                  <h3 class="card__name">Tango</h3>
+                  <p class="card__description">
+                     Rescate de Dame Tu Pata
+                  </p>
+
+                  <a href="http://localhost/DameTuPata/views/cliente/tango.php" class="card__button">Conocer más</a>
+               </div>
+            </article>
+          </div>
+       </div>
+
+       <!-- Navigation buttons -->
+       <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+       </div>
+       
+       <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+       </div>
+    </div>
+ </section>
+
+ <!---------->
+ <div class="container">
+    <div class="text-center tittle">
+      <h2 class="section-heading text-uppercase">CADA UNA DE LAS DONACIONES HECHAS A DAME TU PATA SON DESTINADAS A:</h2>
+    </div>
+    <div class="donaciones">
+      <div class="don">
+        <h1>MEDICINAS</h1>
+        <i class="fa-solid fa-kit-medical"></i>
+        <P>Vacunas, tratamientos, desparacitantes y antigarrapatas</P>
+      </div>
+      <div class="don">
+        <h1>ALIMENTO</h1>
+        <i class="fa-solid fa-bone"></i>
+        <p>Alimento para nuestros perritos rescatados que aun no han sido adoptados y se encuentran hospitalizados o en hogar temporal</p>
+     </div>
+      <div class="don">
+         <h1>CUENTAS MEDICAS</h1>
+         <i class="fa-solid fa-bandage"></i>
+         <p>Cuentas pendientes en la veterinaria</p>
+      </div>
+     </div>
+     <a class="my-custom-button" href="?c=Principal&a=donaciones">DONA</a>
+   </div>
+
+<!--footer-->
+
+<footer>
+   <div class="container">
+     <div class="footer-content">
+       <p>&copy; 2024 Dame Tu Pata. Todos los derechos reservados.</p>
+       <ul class="footer-links">
+         <li><a href="#">Política de Privacidad</a></li>
+         <li class="separator">|</li> 
+         <li><a href="#">Aviso Legal</a></li>
+       </ul>
+     </div>
+   </div>
+ </footer>
+ 
+ <!--=============== SWIPER JS ===============-->
+ <script src="js/swiper.min.js"></script>
+
+ <!--=============== MAIN JS ===============-->
+ <script src="js/main.js"></script>
+
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Template Javascript -->
+ <script src="http://localhost/DameTuPata/assets/js/main.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
 </html>
