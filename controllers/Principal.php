@@ -22,4 +22,43 @@ class PrincipalController
       {
             require_once "views/cliente/Donaciones.php";
       }
+      public function bebuchita(){
+            require_once "views/cliente/bebuchita.php";
+      }
+      public function belen(){
+            require_once "views/cliente/belen.php";
+      }
+      public function cocoa(){
+            require_once "views/cliente/cocoa.php";
+      }
+      public function fiby(){
+            require_once "views/cliente/fiby.php";
+      }
+      public function fiji(){
+            require_once "views/cliente/fiji.php";
+      }
+      public function lolita(){
+            require_once "views/cliente/lolita.php";
+      }
+      public function lula(){
+            require_once "views/cliente/lula.php";
+      }
+      public function manolo(){
+            require_once "views/cliente/manolo.php";
+      }
+      public function matilda(){
+            require_once "views/cliente/matilda.php";
+      }
+      public function mumujita(){
+            require_once "views/cliente/mumujita.php";
+      }
+      public function piñita(){
+            require_once "views/cliente/piñita.php";
+      }
+      public function quesito(){
+            require_once "views/cliente/quesito.php";
+      }
+      public function tango(){
+            require_once "views/cliente/tango.php";
+      }
 }
