@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 23, 2024 at 07:41 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 09-05-2024 a las 22:59:19
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dametupata`
+-- Base de datos: `dametupata`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria`
+-- Estructura de tabla para la tabla `categoria`
 --
 
 CREATE TABLE `categoria` (
@@ -33,7 +33,7 @@ CREATE TABLE `categoria` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `categoria`
+-- Volcado de datos para la tabla `categoria`
 --
 
 INSERT INTO `categoria` (`IdCategoria`, `NombreCategoria`) VALUES
@@ -42,7 +42,7 @@ INSERT INTO `categoria` (`IdCategoria`, `NombreCategoria`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detalleadopcion`
+-- Estructura de tabla para la tabla `detalleadopcion`
 --
 
 CREATE TABLE `detalleadopcion` (
@@ -55,7 +55,7 @@ CREATE TABLE `detalleadopcion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detallecompra`
+-- Estructura de tabla para la tabla `detallecompra`
 --
 
 CREATE TABLE `detallecompra` (
@@ -67,32 +67,53 @@ CREATE TABLE `detallecompra` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `detallecompra`
+-- Volcado de datos para la tabla `detallecompra`
 --
 
 INSERT INTO `detallecompra` (`IdDetalleCompra`, `IdUsuario`, `IdProducto`, `FechaCompra`, `Cantidad`) VALUES
-(1, 1, 3, '2024-04-23', 2),
-(2, 1, 4, '2024-04-23', 2),
-(3, 1, 2, '2024-04-23', 2),
-(4, 1, 1, '2024-04-23', 2);
+(37, 1, 3, '2024-05-09', 3),
+(36, 1, 4, '2024-05-09', 3),
+(35, 1, 2, '2024-05-09', 3),
+(34, 1, 1, '2024-05-09', 3),
+(33, 1, 3, '2024-05-09', 3),
+(32, 1, 4, '2024-05-09', 3),
+(31, 1, 2, '2024-05-09', 3),
+(30, 1, 1, '2024-05-09', 3),
+(29, 1, 3, '2024-05-03', 2),
+(28, 1, 4, '2024-05-03', 2),
+(27, 1, 2, '2024-05-03', 2),
+(26, 1, 1, '2024-05-03', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detalledonacion`
+-- Estructura de tabla para la tabla `detalledonacion`
 --
 
 CREATE TABLE `detalledonacion` (
   `IdDonacion` int(11) NOT NULL,
-  `IdUsuario` int(11) DEFAULT NULL,
-  `FechaDonacion` date DEFAULT NULL,
-  `MontoDonacion` float DEFAULT NULL
+  `id_transaccion` varchar(150) NOT NULL,
+  `cantidad_donada` decimal(11,3) NOT NULL,
+  `estado_transaccion` varchar(50) NOT NULL,
+  `fecha_transaccion` date DEFAULT NULL,
+  `moneda_transaccion` varchar(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalledonacion`
+--
+
+INSERT INTO `detalledonacion` (`IdDonacion`, `id_transaccion`, `cantidad_donada`, `estado_transaccion`, `fecha_transaccion`, `moneda_transaccion`) VALUES
+(20, '8X202623T4724184K', 53.170, 'Completed', '2024-05-09', 'USD'),
+(19, '8Y3608259H4119034', 16.170, 'Completed', '2024-05-03', 'USD'),
+(18, '0CG900984P998382E', 1.000, 'Completed', '2024-05-03', 'USD'),
+(17, '9RP03725RX646114J', 7.940, 'Completed', '2024-05-03', 'USD'),
+(16, '4T935762DM272120V', 5.600, 'Completed', '2024-05-03', 'USD');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `estadoproducto`
+-- Estructura de tabla para la tabla `estadoproducto`
 --
 
 CREATE TABLE `estadoproducto` (
@@ -101,7 +122,7 @@ CREATE TABLE `estadoproducto` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `estadoproducto`
+-- Volcado de datos para la tabla `estadoproducto`
 --
 
 INSERT INTO `estadoproducto` (`IdEstado`, `NombreEstado`) VALUES
@@ -110,7 +131,7 @@ INSERT INTO `estadoproducto` (`IdEstado`, `NombreEstado`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mascota`
+-- Estructura de tabla para la tabla `mascota`
 --
 
 CREATE TABLE `mascota` (
@@ -125,7 +146,7 @@ CREATE TABLE `mascota` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `producto`
+-- Estructura de tabla para la tabla `producto`
 --
 
 CREATE TABLE `producto` (
@@ -141,19 +162,19 @@ CREATE TABLE `producto` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `producto`
+-- Volcado de datos para la tabla `producto`
 --
 
 INSERT INTO `producto` (`IdProducto`, `NombreProducto`, `DescripcionProducto`, `IdCategoria`, `IdEstado`, `CantidadProducto`, `PrecioUnitario`, `ImagenProducto`, `Cantidad`) VALUES
-(1, 'Collar para mascota pequeña', 'Collar color rosado para mascota talla pequeña', 1, 1, 8, 6.5, 'collar.jpg', 0),
-(2, 'Collar para mascota mediano', 'Collar para mascota talla mediana de diferentes colores', 1, 1, 15, 8.5, 'collarmediano.jpg', 0),
-(3, 'Jueguete mascota lazo', 'Lazo para juegos de mascotas', 1, 1, 8, 5.5, 'lazo.jpg', 0),
-(4, 'Jueguete plástico para mascota', 'Jueguete plástico azul para mascota', 1, 1, 4, 5.65, 'juegueteazul.jpg', 0);
+(1, 'Collar para mascota pequeña', 'Collar color rosado para mascota talla pequeña', 1, 1, 10, 6.5, 'collar.jpg', 15),
+(2, 'Collar para mascota mediano', 'Collar para mascota talla mediana de diferentes colores', 1, 1, 10, 8.5, 'collarmediano.jpg', 15),
+(3, 'Jueguete mascota lazo', 'Lazo para juegos de mascotas', 1, 1, 10, 5.5, 'lazo.jpg', 15),
+(4, 'Jueguete plástico para mascota', 'Jueguete plástico azul para mascota', 1, 1, 10, 5.65, 'juegueteazul.jpg', 15);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rol`
+-- Estructura de tabla para la tabla `rol`
 --
 
 CREATE TABLE `rol` (
@@ -164,7 +185,7 @@ CREATE TABLE `rol` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -180,7 +201,7 @@ CREATE TABLE `usuario` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `usuario`
+-- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`IdUsuario`, `IdRol`, `NombreUsuario`, `ApellidoUsuario`, `TelefonoUsuario`, `DuiUsuario`, `CorreoUsuario`, `DireccionUsuario`, `ContrasenaUsuario`) VALUES
@@ -188,17 +209,17 @@ INSERT INTO `usuario` (`IdUsuario`, `IdRol`, `NombreUsuario`, `ApellidoUsuario`,
 (1, 1, 'Abigail', 'Acuña', '72540178', '0735302143', 'acuaabigail@yahoo.com', 'Residencial Villa Galicia', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categoria`
+-- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`IdCategoria`);
 
 --
--- Indexes for table `detalleadopcion`
+-- Indices de la tabla `detalleadopcion`
 --
 ALTER TABLE `detalleadopcion`
   ADD PRIMARY KEY (`IdAdopcion`),
@@ -206,7 +227,7 @@ ALTER TABLE `detalleadopcion`
   ADD KEY `FK_Mascota_Adopcion` (`IdMascota`);
 
 --
--- Indexes for table `detallecompra`
+-- Indices de la tabla `detallecompra`
 --
 ALTER TABLE `detallecompra`
   ADD PRIMARY KEY (`IdDetalleCompra`),
@@ -214,26 +235,25 @@ ALTER TABLE `detallecompra`
   ADD KEY `FK_Producto_Compra` (`IdProducto`);
 
 --
--- Indexes for table `detalledonacion`
+-- Indices de la tabla `detalledonacion`
 --
 ALTER TABLE `detalledonacion`
-  ADD PRIMARY KEY (`IdDonacion`),
-  ADD KEY `FK_Usuario_Donacion` (`IdUsuario`);
+  ADD PRIMARY KEY (`IdDonacion`);
 
 --
--- Indexes for table `estadoproducto`
+-- Indices de la tabla `estadoproducto`
 --
 ALTER TABLE `estadoproducto`
   ADD PRIMARY KEY (`IdEstado`);
 
 --
--- Indexes for table `mascota`
+-- Indices de la tabla `mascota`
 --
 ALTER TABLE `mascota`
   ADD PRIMARY KEY (`IdMascota`);
 
 --
--- Indexes for table `producto`
+-- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`IdProducto`),
@@ -241,13 +261,13 @@ ALTER TABLE `producto`
   ADD KEY `FK_Estado_Producto` (`IdEstado`);
 
 --
--- Indexes for table `rol`
+-- Indices de la tabla `rol`
 --
 ALTER TABLE `rol`
   ADD PRIMARY KEY (`IdRol`);
 
 --
--- Indexes for table `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`IdUsuario`),
@@ -255,62 +275,62 @@ ALTER TABLE `usuario`
   ADD KEY `FK_Usuario_Rol` (`IdRol`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria`
+-- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
   MODIFY `IdCategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `detalleadopcion`
+-- AUTO_INCREMENT de la tabla `detalleadopcion`
 --
 ALTER TABLE `detalleadopcion`
   MODIFY `IdAdopcion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `detallecompra`
+-- AUTO_INCREMENT de la tabla `detallecompra`
 --
 ALTER TABLE `detallecompra`
-  MODIFY `IdDetalleCompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IdDetalleCompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
--- AUTO_INCREMENT for table `detalledonacion`
+-- AUTO_INCREMENT de la tabla `detalledonacion`
 --
 ALTER TABLE `detalledonacion`
-  MODIFY `IdDonacion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdDonacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `estadoproducto`
+-- AUTO_INCREMENT de la tabla `estadoproducto`
 --
 ALTER TABLE `estadoproducto`
   MODIFY `IdEstado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `mascota`
+-- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
   MODIFY `IdMascota` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `producto`
+-- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
   MODIFY `IdProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `rol`
+-- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
   MODIFY `IdRol` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
