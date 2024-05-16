@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2024 a las 22:59:19
+-- Tiempo de generación: 17-05-2024 a las 01:47:10
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -71,18 +71,10 @@ CREATE TABLE `detallecompra` (
 --
 
 INSERT INTO `detallecompra` (`IdDetalleCompra`, `IdUsuario`, `IdProducto`, `FechaCompra`, `Cantidad`) VALUES
-(37, 1, 3, '2024-05-09', 3),
-(36, 1, 4, '2024-05-09', 3),
-(35, 1, 2, '2024-05-09', 3),
-(34, 1, 1, '2024-05-09', 3),
-(33, 1, 3, '2024-05-09', 3),
-(32, 1, 4, '2024-05-09', 3),
-(31, 1, 2, '2024-05-09', 3),
-(30, 1, 1, '2024-05-09', 3),
-(29, 1, 3, '2024-05-03', 2),
-(28, 1, 4, '2024-05-03', 2),
-(27, 1, 2, '2024-05-03', 2),
-(26, 1, 1, '2024-05-03', 2);
+(53, 22, 4, '2024-05-16', 2),
+(52, 22, 3, '2024-05-16', 2),
+(51, 22, 2, '2024-05-16', 2),
+(50, 22, 1, '2024-05-16', 2);
 
 -- --------------------------------------------------------
 
@@ -104,6 +96,11 @@ CREATE TABLE `detalledonacion` (
 --
 
 INSERT INTO `detalledonacion` (`IdDonacion`, `id_transaccion`, `cantidad_donada`, `estado_transaccion`, `fecha_transaccion`, `moneda_transaccion`) VALUES
+(25, '2TY710387E3209139', 21.460, 'Completed', '2024-05-17', 'USD'),
+(24, '9FJ800541T618235H', 37.320, 'Completed', '2024-05-16', 'USD'),
+(23, '3BH06135EF093564H', 26.740, 'Completed', '2024-05-16', 'USD'),
+(22, '3MT93665XN771391Y', 16.170, 'Completed', '2024-05-16', 'USD'),
+(21, '008126428D877701M', 25.000, 'Completed', '2024-05-09', 'USD'),
 (20, '8X202623T4724184K', 53.170, 'Completed', '2024-05-09', 'USD'),
 (19, '8Y3608259H4119034', 16.170, 'Completed', '2024-05-03', 'USD'),
 (18, '0CG900984P998382E', 1.000, 'Completed', '2024-05-03', 'USD'),
@@ -166,10 +163,10 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`IdProducto`, `NombreProducto`, `DescripcionProducto`, `IdCategoria`, `IdEstado`, `CantidadProducto`, `PrecioUnitario`, `ImagenProducto`, `Cantidad`) VALUES
-(1, 'Collar para mascota pequeña', 'Collar color rosado para mascota talla pequeña', 1, 1, 10, 6.5, 'collar.jpg', 15),
-(2, 'Collar para mascota mediano', 'Collar para mascota talla mediana de diferentes colores', 1, 1, 10, 8.5, 'collarmediano.jpg', 15),
-(3, 'Jueguete mascota lazo', 'Lazo para juegos de mascotas', 1, 1, 10, 5.5, 'lazo.jpg', 15),
-(4, 'Jueguete plástico para mascota', 'Jueguete plástico azul para mascota', 1, 1, 10, 5.65, 'juegueteazul.jpg', 15);
+(1, 'Taza personalizada', 'Taza personalizada con temática de perritos', 1, 1, 10, 3.5, 'taza.jpg', 15),
+(2, 'Cosmetiquera personalizada colorida', 'Comestiquera personalizada con temática de perritos coloridos', 1, 1, 3, 8.5, 'cosmetiquera1.jpg', 15),
+(3, 'Cosmetiquera personalizada amarilla', 'Comestiquera personalizada con temática de perritos amarilla', 1, 1, 3, 5.5, 'cosmetiquera2.jpg', 15),
+(4, 'Pin personalizados', 'Pin de caricaturas y personalizados', 1, 1, 3, 3, 'pinesesmaltados.jpg', 15);
 
 -- --------------------------------------------------------
 
@@ -206,7 +203,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`IdUsuario`, `IdRol`, `NombreUsuario`, `ApellidoUsuario`, `TelefonoUsuario`, `DuiUsuario`, `CorreoUsuario`, `DireccionUsuario`, `ContrasenaUsuario`) VALUES
 (2, 1, 'Katherine', 'Melara', '74123024', '023654123', 'katy@gmail.com', 'Villa Galicia2', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
-(1, 1, 'Abigail', 'Acuña', '72540178', '0735302143', 'acuaabigail@yahoo.com', 'Residencial Villa Galicia', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92');
+(1, 1, 'Abigail', 'Acuña', '72540178', '0735302143', 'acuaabigail@yahoo.com', 'Residencial Villa Galicia', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
+(22, 1, 'Erika', 'Acuna', '77410508', '012369875', 'erikaacuna671@gmail.com', 'Res Villa Galicia casa 11C', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92');
 
 --
 -- Índices para tablas volcadas
@@ -294,13 +292,13 @@ ALTER TABLE `detalleadopcion`
 -- AUTO_INCREMENT de la tabla `detallecompra`
 --
 ALTER TABLE `detallecompra`
-  MODIFY `IdDetalleCompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `IdDetalleCompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT de la tabla `detalledonacion`
 --
 ALTER TABLE `detalledonacion`
-  MODIFY `IdDonacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IdDonacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `estadoproducto`
@@ -330,7 +328,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
