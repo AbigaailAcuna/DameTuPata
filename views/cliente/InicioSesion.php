@@ -1,5 +1,5 @@
 <?php
-var_dump($_SESSION);
+//var_dump($_SESSION);
 error_reporting(E_ERROR|E_PARSE);
 ?>
 

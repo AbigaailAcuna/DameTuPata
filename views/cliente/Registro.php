@@ -1,4 +1,6 @@
-<?php var_dump($_SESSION) ?><!DOCTYPE html>
+<?php 
+//var_dump($_SESSION) ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,7 +76,7 @@
                 }
                 ?>
 
-                <p class="message">¿Ya posees una cuenta?<a href="?c=Compras&a=index"> Iniciar Sesión</a></p>
+                <p class="message">¿Ya posees una cuenta?<a href="?c=Usuario&a=iniciosesion"> Iniciar Sesión</a></p>
             </form>
         </div>
     </div>
