@@ -61,4 +61,7 @@ class PrincipalController
       public function tango(){
             require_once "views/cliente/tango.php";
       }
+      public function bebuchitaadopcion(){
+            require_once "views/cliente/bebuchitaadopcion.php";
+      }
 }

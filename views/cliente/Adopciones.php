@@ -8,107 +8,150 @@
 </header>
 
 <!--Slider de cards-->
+<br><br><br>
+<div class="container">
 <div class="text-center">
-   <h2 class="section-heading text-uppercase rescates">HISTORIAS QUE CAMBIAN VIDAS</h2>
+   <h2 class="section-heading text-uppercase rescates">NUESTROS ANGELITOS EN ADOPCION</h2>
 </div>
-  <section class="container1">
-    <div class="card__container swiper">
-       <div class="card__content">
-          <div class="swiper-wrapper">
-             <article class="card__article swiper-slide">
-                <div class="card__image">
-                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Belen/belen6.jpg" alt="image" class="card__img">
-                   <div class="card__shadow"></div>
-                </div>
- 
-                <div class="card__data">
-                   <h3 class="card__name">Belen</h3>
-                   <p class="card__description">
-                      Rescate de Dame Tu Pata
-                   </p>
- 
-                   <a href="?c=Principal&a=belen" class="card__button">Adoptar</a>
-                </div>
-             </article>
- 
-             <article class="card__article swiper-slide">
-                <div class="card__image">
-                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Cocoa/cocoa6.jpg" alt="image" class="card__img">
-                   <div class="card__shadow"></div>
-                </div>
- 
-                <div class="card__data">
-                   <h3 class="card__name">Cocoa</h3>
-                   <p class="card__description">
-                     Rescate de Dame Tu Pata
-                   </p>
- 
-                   <a href="?c=Principal&a=cocoa" class="card__button">Adoptar</a>
-                </div>
-             </article>
- 
-             <article class="card__article swiper-slide">
-                <div class="card__image">
-                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiby/fiby1.jpg" alt="image" class="card__img">
-                   <div class="card__shadow"></div>
-                </div>
- 
-                <div class="card__data">
-                   <h3 class="card__name">Fiby</h3>
-                   <p class="card__description">
-                     Rescate de Dame Tu Pata
-                   </p>
- 
-                   <a href="?c=Principal&a=fiby" class="card__button">Adoptar</a>
-                </div>
-             </article>
- 
-             <article class="card__article swiper-slide">
-                <div class="card__image">
-                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiji/fiji8.jpg" alt="image" class="card__img">
-                   <div class="card__shadow"></div>
-                </div>
- 
-                <div class="card__data">
-                   <h3 class="card__name">Fiji</h3>
-                   <p class="card__description">
-                     Rescate de Dame Tu Pata
-                   </p>
- 
-                   <a href="?c=Principal&a=fiji" class="card__button">Adoptar</a>
-                </div>
-             </article>
+<br><br><br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Bebuchita12-Hija de Gigi/bebuchita5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bebuchita</h5>
+        <a href="?c=Principal&a=bebuchitaadopcion" class="custom-button">ADOPTAR</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Cocoa/cocoa6.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cocoa</h5>
+        <a href="#" class="custom-button">ADOPTAR</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiby/fiby6.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Fiby</h5>
+        <a href="#" class="custom-button">ADOPTAR</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiji/fiji2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Fiji</h5>
+        <a href="#" class="custom-button">ADOPTAR</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
-             <article class="card__article swiper-slide">
-                <div class="card__image">
-                   <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Bebuchita12-Hija de Gigi/bebuchita1.jpg" alt="image" class="card__img">
-                   <div class="card__shadow"></div>
-                </div>
- 
-                <div class="card__data">
-                   <h3 class="card__name">Bebuchita</h3>
-                   <p class="card__description">
-                     Rescate de Dame Tu Pata
-                   </p>
- 
-                   <a href="?c=Principal&a=bebuchita" class="card__button">Adoptar</a>
-                </div>
-             </article>
+<!--
+<br><br><br>
+<div class="container">
+<div class="row row-cols-1 row-cols-md-4 g-6">
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Bebuchita12-Hija de Gigi/bebuchita1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Bebuchita</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Cocoa/cocoa6.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Cocoa</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiby/fiby1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Fiby</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiji/fiji8.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Fiji</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Bebuchita12-Hija de Gigi/bebuchita1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Cocoa/cocoa6.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiby/fiby1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+  <div class="card h-100" style="width: 17rem;">
+  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiji/fiji8.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <a href="#" class="custom-button">ADOPTAR</a>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+<!--footer-->
 
-             <article class="card__article swiper-slide">
-               <div class="card__image">
-                  <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Lolita/lolita2.jpg" alt="image" class="card__img">
-                  <div class="card__shadow"></div>
-               </div>
+<footer>
+   <div class="container">
+     <div class="footer-content">
+       <p>&copy; 2024 Dame Tu Pata. Todos los derechos reservados.</p>
+       <ul class="footer-links">
+         <li><a href="#">Política de Privacidad</a></li>
+         <li class="separator">|</li> 
+         <li><a href="#">Aviso Legal</a></li>
+       </ul>
+     </div>
+   </div>
+ </footer>
 
-               <div class="card__data">
-                  <h3 class="card__name">Lolita</h3>
-                  <p class="card__description">
-                     Rescate de Dame Tu Pata
-                  </p>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
-                  <a href="?c=Principal&a=lolita" class="card__button">Adoptar</a>
-               </div>
-            </article>
-          </div>
-       </div>
+ <!-- Template Javascript -->
+ <script src="http://localhost/DameTuPata/assets/js/main.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

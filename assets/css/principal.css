@@ -271,6 +271,7 @@ header.masthead {
 .info {
   width: 50%;
   padding: 30px;
+  font-size: 20px;
   font-family: 'Arial', sans-serif;
   position: relative; /* Posición relativa para alinear la línea */
 }
@@ -405,6 +406,22 @@ header.masthead {
   color: #a09f9d;
 }
 
+.custom-button {
+  background-color: #e55750; /* Color de fondo rosa */
+  color: white; /* Color del texto blanco */
+  padding: 15px 30px; /* Padding del botón */
+  border-radius: 20px; /* Borde redondeado */
+  font-size: 15px; /* Tamaño de fuente */
+  text-decoration: none; /* Quita la subrayado */
+  display: inline-block; /* Permite definir padding y border-radius */
+  text-decoration: none;
+}
+
+.custom-button:hover {
+  text-decoration: none; /* Quita el subrayado al hacer hover */
+  color: #a09f9d;
+}
+
 footer {
   margin-top: 50px;
   background-color: #f9ecdb; /* Color de fondo del footer */
@@ -449,5 +466,76 @@ footer {
   color: #e55750;
 }
 
+.adopcion {
+  background-color: #f9ecdb; /* Color rosa pastel */
+  color: #888; /* Color gris para el texto */
+  text-align: center; /* Centrar el texto */
+  padding: 50px 0; /* Espacio vertical */
+  box-sizing: border-box;
+}
+
+.elementos {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.fa-venus-mars,
+.fa-calendar,
+.fa-dog{
+  color: #e55750;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+.importante {
+  background-color: #f8d7da; /* Color de fondo para el mensaje "IMPORTANTE" */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px;
+  width: 30%; /* Ancho del mensaje importante */
+text-align: center;
+}
+.formulario {
+  width: 70%; /* Ancho del formulario */
+}
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formulario form label {
+  font-weight: bold;
+}
+.formulario form input, 
+.formulario form textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.formulario form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.formulario form button:hover {
+  background-color: #0056b3;
+}
+
+@media only screen and (max-width: 900px) {
+  .importante h1 {
+    font-size: 15px;
+  }
+}
 
 
