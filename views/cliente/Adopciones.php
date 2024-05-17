@@ -29,7 +29,7 @@
       <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Cocoa/cocoa6.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Cocoa</h5>
-        <a href="#" class="custom-button">ADOPTAR</a>
+        <a href="?c=Principal&a=cocoaadopcion" class="custom-button">ADOPTAR</a>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
       <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiby/fiby6.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Fiby</h5>
-        <a href="#" class="custom-button">ADOPTAR</a>
+        <a href="?c=Principal&a=fibyadopcion" class="custom-button">ADOPTAR</a>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
       <img src="http://localhost/DameTuPata/assets/img/Rescates-antes-despues/Fiji/fiji2.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Fiji</h5>
-        <a href="#" class="custom-button">ADOPTAR</a>
+        <a href="?c=Principal&a=fijiadopcion" class="custom-button">ADOPTAR</a>
       </div>
     </div>
   </div>

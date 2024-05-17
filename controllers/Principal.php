@@ -64,4 +64,13 @@ class PrincipalController
       public function bebuchitaadopcion(){
             require_once "views/cliente/bebuchitaadopcion.php";
       }
+      public function cocoaadopcion(){
+            require_once "views/cliente/cocoaadopcion.php";
+      }
+      public function fibyadopcion(){
+            require_once "views/cliente/fibyadopcion.php";
+      }
+      public function fijiadopcion(){
+            require_once "views/cliente/fijiadopcion.php";
+      }
 }
